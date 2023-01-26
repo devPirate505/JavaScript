@@ -1,0 +1,78 @@
+
+
+<html>
+
+	<head>
+
+
+		<title>
+			JQuery
+		</title>
+		
+		<script src='library/jquery-3.6.0.min.js'></script>
+		
+		<style>
+		
+			#box{
+			
+				border:1px solid brown;
+				background: #a77;
+				padding: 5px;
+				text-align: center;
+				width: 100px;
+				height: 100px;
+				position: absolute;
+
+			}
+			
+		</style>
+		
+	</head>
+
+
+
+	<body>
+		
+		<input type='button' value='Click me' id='mybtn'/>
+		
+		<div id='box'></div>
+		
+		<script>
+		
+			
+			$('#mybtn').click(function() {
+			
+				var first = {
+				
+					'left' : '800px',
+					'border-width' : '10px',
+					'border-radius' : '50%',
+				
+				};
+				
+				var second = {
+				
+					'top': '450px',
+					'border-radius' : '0%',
+				
+				}
+			
+				$('#box').animate(first, 2000).animate(second, 2000);
+				
+			}) ;
+			
+			
+			
+			//var test = {'name' : 'Mohammad Ali' , 'age' : '23'};
+			
+			//console.log(test.name)
+		
+		</script>
+		
+	</body>
+
+
+
+
+
+</html>

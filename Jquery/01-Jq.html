@@ -1,0 +1,53 @@
+
+
+<html>
+
+	<head>
+
+
+		<title>
+			JQuery
+		</title>
+		
+		<script src='library/jquery-3.6.0.min.js'></script>
+		
+	</head>
+
+
+
+	<body>
+		
+		<button id='btn1'j>clik</button>
+		<button id='btn2' style='display: none'j>clik</button>
+		<p>This is paragraph one.</p>
+		<p>This is paragraph two.</p>
+		<p>This is paragraph three.</p>
+		<p>This is paragraph four.</p>
+		
+		<script>
+		
+			$('#btn1').click(function() {
+			
+				$(this).fadeOut(0);
+				$('p').fadeOut();
+				$('#btn2').fadeIn(0);
+			
+			});
+			
+			$('#btn2').click(function() {
+			
+				$('#btn1').fadeIn(0);
+				$('p').slideDown();
+				$('#btn2').fadeOut(0);
+				
+			});
+		
+		</script>
+		
+	</body>
+
+
+
+
+
+</html>

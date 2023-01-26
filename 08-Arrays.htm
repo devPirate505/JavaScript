@@ -1,0 +1,62 @@
+<html>
+
+	<head>
+	
+		<title>Arrays</title>
+		
+		<style>
+		
+			#message{
+			
+				background: yellow;
+				font-size: 30px;
+			
+			}
+		
+		</style>
+		
+	</head>
+	
+	<body>
+	
+		<h1>Arrays</h1>
+			
+		<ul>
+		
+			<li>Pakistan</li>
+			<li>Afghanistan</li>
+			<li>India</li>
+			<li>Iran</li>
+			<li>Iraq</li>
+		
+		</ul>
+		
+		<div id='message'></div>
+		
+		<input type='number' id='num' onchange='test()'/>
+		
+		<input type='button' value='Go' onclick='test()' />
+		
+		<script>
+		
+			var list = document.getElementsByTagName('li');
+			var message = document.querySelector('#message');
+			
+			function test()
+			{
+			
+				var num = document.querySelector('#num');
+				//*console.log(list[num.value]);
+				message.innerHTML = list[num.value].innerHTML;
+			}
+			
+			
+			
+		</script>
+	
+
+
+		
+	</body>
+
+</html>

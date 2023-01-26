@@ -1,0 +1,53 @@
+<html>
+
+	<head>
+	
+		<title>Search</title>
+		
+	</head>
+	
+	<body>
+	
+		<h1>Create an element</h1>
+			
+		<input type='text' id='q'/>
+		
+		<input type='button' value='Go' onclick='add()' />
+		
+		<ul id ='friends'>
+			
+			<li> Jamal Shah </li>
+			
+		</ul>
+		
+		<script>
+		
+			
+			
+			function add()
+			{
+			
+				var friends = document.querySelector('#friends');
+				var q = document.querySelector('#q');
+				
+				var test = document.createElement('li');
+				
+				test.innerHTML = q.value;
+				
+				//friends.prepend(test);
+				
+				friends.append(test);
+				
+				q.value='';
+			} 
+			
+			
+			
+		</script>
+	
+
+
+		
+	</body>
+
+</html>

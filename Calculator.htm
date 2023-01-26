@@ -1,0 +1,66 @@
+<html>
+
+	<head>
+	
+		<title></title>
+	
+	</head>
+	
+	<body>
+	
+		<h1>Calculator</h1>
+		
+			Num 1<input type='number' id='num1' />
+			
+			<br/><br/>
+		
+			Num 2<input type='number' id='num2' />
+			
+			<br/><br/>
+			
+			<input type='button' id='btn' value='Percentage' onclick='add()'/>
+			
+			<input type='button' id='btn' value='-' onclick='subtract()'/>
+			
+			<div id='message'>
+			
+			
+			
+			</div>
+			
+			<script>
+			
+				function add()
+				{
+					var num1 = document.getElementById('num1');
+					var num2 = document.getElementById('num2');
+					var message = document.getElementById('message');
+					var sum;
+					var result;
+					
+					sum = parseInt(num1.value) / parseInt(num2.value); 
+					
+					result = sum * 100 + "%";
+				
+					message.innerHTML = result;
+					
+				}	
+				
+				function subtract()
+				{
+					var num1 = document.getElementById('num1');
+					var num2 = document.getElementById('num2');
+					var message = document.getElementById('message');
+					var result;
+					
+					result = num1.value - num2.value; 
+				
+					message.innerHTML = result;
+					
+				}	
+			
+			</script>
+	
+	</body>
+
+</html>

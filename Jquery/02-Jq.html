@@ -1,0 +1,79 @@
+
+
+<html>
+
+	<head>
+
+
+		<title>
+			JQuery
+		</title>
+		
+		<script src='library/jquery-3.6.0.min.js'></script>
+		
+		<style>
+		
+			.error{
+			
+				border:1px solid brown;
+				background: #a77;
+				padding: 5px;
+				text-align: center;
+			
+			}
+			
+			.white{
+			
+				color: white;
+			
+			}
+		
+		</style>
+		
+	</head>
+
+
+
+	<body>
+	
+		<p>This is paragraph one.</p>
+		<p>This is paragraph two.</p>
+		<p>This is paragraph three.</p>
+		<p>This is paragraph four.</p>
+		
+		<ul>
+		
+			<li>Pakistan</li>
+			<li>India</li>
+			<li>Sri Lanka</li>
+			<li>Afghanistan</li>
+		
+		
+		</ul>
+		
+		<input type='button' value='Click me' id='mybtn'/>
+		
+		<script>
+		
+			$('p').click(function() {
+			
+				$(this).css('color','green');
+			
+			});
+			
+			$('#mybtn').click(function() {
+			
+				$('li').addClass('error');
+				$('li').addClass('white');
+			
+			});
+		
+		</script>
+		
+	</body>
+
+
+
+
+
+</html>

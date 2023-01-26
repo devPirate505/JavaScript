@@ -1,0 +1,43 @@
+<html>
+
+	<head>
+	
+		<title>Arrays</title>
+		
+	</head>
+	
+	<body>
+	
+		<h1>Arrays</h1>
+			
+		<div id='message'>
+		
+		</div>
+		
+		<input type='number' id='num' onchange='test()'/>
+		
+		<input type='button' value='Go' onclick='test()' />
+		
+		<script>
+		
+			var list = Array('Ali', 'Naveed', 'Kamran', 'Shahzaib', 'adnan', 'Jamal');
+			var message = document.querySelector('#message');
+			
+			function test()
+			{
+			
+				var num = document.querySelector('#num');
+				//*console.log(list[num.value]);
+				message.innerHTML = list[num.value];
+			}
+			
+			
+			
+		</script>
+	
+
+
+		
+	</body>
+
+</html>

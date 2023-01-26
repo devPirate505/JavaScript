@@ -1,0 +1,45 @@
+<html>
+
+	<head>
+	
+		<title>Js</title>
+		
+	</head>
+	
+	<body>
+	
+		<h1>Funtions</h1>
+		
+		<input type='button' value='Click Me...' onclick='test()' />
+		
+		<script>
+		
+		function test()
+		{
+			var name;
+			var age;
+			
+			name = prompt('Enter your Name:');
+			
+			age = prompt('Age:');
+			
+			document.write('Welcome Mr. ' + name);
+			
+			document.write('<hr />');
+			
+			if(age >= 18)
+			{
+				document.write('Congrats, you are eligible for driving licence')
+				
+			} else	{
+					
+					document.write('Sorry, you are too young to drive')
+					
+			}	
+		}
+		
+		</script>
+	
+	</body>
+
+</html>

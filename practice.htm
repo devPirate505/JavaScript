@@ -1,0 +1,54 @@
+<html>
+
+	<head>
+	
+		<title>Practice</title>
+		
+		<style>
+		
+		
+		
+		</style>
+	
+	</head>
+	
+	<body>
+	
+		<h1> Creating an Element through Js </h1>
+		
+		
+		<input type='text' id='q'/>
+		
+		<input type='button' value='Add Text' onclick='add()'/>
+		
+		<div id='text'>
+		
+		</div>
+	
+		<script>
+		
+			function add()
+			{
+			
+			var text = document.querySelector('#text');
+			var q = document.querySelector('#q');
+			
+			var test = document.createElement('p');
+			
+			test.innerHTML = q.value;
+			
+			text.append(test);
+			
+			q.value = '';
+			
+			test.style.backgroundColor = 'yellow';
+			
+			test.style.width = '400px';
+			
+			}
+		
+		</script>
+	
+	</body>
+
+</html>	

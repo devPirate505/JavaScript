@@ -1,0 +1,113 @@
+<html>
+
+	<head>
+	
+		<title>Form Validation</title>
+	
+	</head>
+	
+	<body>
+	
+		<h1>
+		Register
+		</h1>
+		
+		<form action='target.php' onsubmit='return validate()'>
+		
+			Name <input type='text' name='name' id='name'/> <span id='name_msg'> </span>
+			
+			<br /> <br />
+			
+			Age <input type='number' name='age' id='age'/> <span id='age_msg'> </span>
+			
+			<br /> <br />
+			
+			Email <input type='text' name='email' id='email'/> <span id='email_msg'> </span>
+			
+			<br /> <br />
+			
+			<input type='checkbox' id='terms'/> I accept terms and conditions.
+			
+			<br /> <br />
+			
+			<span id='terms_msg'></span> 
+
+			<br /> <br />	
+			
+			<input type='submit' value='Register'/>
+			
+		</form>
+		
+		<script>
+		
+			function validate()
+			{
+			
+				var name = document.getElementById('name');
+				var age = document.getElementById('age');
+				var email = document.getElementById('email');
+				var terms = document.getElementById('terms');
+				var name_msg = document.getElementById('name_msg');
+				var age_msg = document.getElementById('age_msg');
+				var email_msg = document.getElementById('email_msg');
+				var terms_msg = document.getElementById('terms_msg');
+				
+				if(name.value.length < 5)
+					{
+					
+						name_msg.innerHTML = 'Invalid Name';
+						name.style.borderColor = 'red';
+						name.focus();
+						return false;
+					
+					}else{
+					
+						name_msg.innerHTML = '';
+						name.style.borderColor = 'green';
+					
+					}
+					
+				if(age.value < 18 || age.value > 55)
+					{
+					
+						age_msg.innerHTML = 'Invalid Age';
+						age.style.borderColor = 'red';
+						age.focus();
+						return false;
+					
+					}else{
+					
+						age_msg.innerHTML = '';
+						age.style.borderColor = 'green';
+					
+					}	
+					
+				if(email.value.indexOf('@') < 4)
+					{
+					
+						email_msg.innerHTML = 'Invalid Email';
+						email.style.borderColor = 'red';
+						email.focus();
+						return false;
+					
+					}else{
+					
+						email_msg.innerHTML = '';
+						email.style.borderColor = 'green';
+					
+					}
+					
+				if(terms.checked == false)
+					{
+					
+						terms_msg.innerHTML = 'You Must Accept our terms and conditions!';
+						return false;
+					
+					}
+			}
+		
+		</script>
+	
+	</body>
+
+</html>	
